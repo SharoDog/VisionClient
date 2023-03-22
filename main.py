@@ -7,9 +7,9 @@ import struct
 weights = "yunet.onnx"
 face_detector = cv2.FaceDetectorYN_create(weights, "", (0, 0))
 client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-host_ip = '192.168.68.106'  # paste your server ip address here
+host_ip = '10.42.0.1'
 port = 9999
-client_socket.connect((host_ip, port))  # a tuple
+client_socket.connect((host_ip, port))
 data = b""
 payload_size = struct.calcsize("Q")
 while True:
